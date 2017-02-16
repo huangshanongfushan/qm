@@ -180,5 +180,13 @@
         <!--<scope>provided</scope>-->
         <!--</dependency>-->
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<fork>true</fork>-->
+            </plugin>
+        </plugins>
+    </build>
 </project>
