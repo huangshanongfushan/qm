@@ -3,6 +3,7 @@ package com.duplicall.qm.app.controller;
 import com.duplicall.qm.biz.service.user.IUser;
 import com.duplicall.qm.biz.service.user.UserImpl;
 import com.duplicall.qm.common.model.User;
+import com.duplicall.qm.common.model.Users;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +20,7 @@ class HomeController {
     @GetMapping("/")
     String index(Model model) {
         model.addAttribute("now", LocalDateTime.now());
-        User user = userImpl.queryById(1);
-        System.out.println("ppppp assssfadfsssassdfadfassssd dsf psssss" + user);
+//        Users user = userImpl.queryById(1);
         return "index";
     }
 
