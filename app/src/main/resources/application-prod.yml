@@ -1,0 +1,29 @@
+spring:
+    profiles: prod
+    datasource:
+        name: dclog
+        url: jdbc:oracle:thin:@192.168.2.216:1521:xe
+        username: dclog
+        password: dc2015
+        # HikariDataSource
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        hikari:
+          idle-timeout: 600000
+          maximum-pool-size: 5
+          minimum-idle: 1
+          connection-test-query: SELECT 'x' FROM DUAL
+          pool-name: dcQmPol
+          max-lifetime: 1800000
+          connection-timeout: 30000
+    aop:
+      auto: true
+    thymeleaf:
+      encoding: UTF-8
+      mode: HTML
+      cache: true
+    resources:
+      cache-period: 0
+
+mybatis:
+  mapperLocations: classpath*:/mapper/*.xml
