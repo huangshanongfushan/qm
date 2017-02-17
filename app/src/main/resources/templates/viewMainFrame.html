@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/js/bootstrap.min.js}" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet" href="../static/css/animate.css">
+</head>
+<body>
+<span th:text="${abc}">baxosls</span>
+<ul class="list-group">
+    <li class="list-group-item" th:each="user:${usersList}">
+        <span th:text="${user.loginId}"></span>uses
+        <span th:text="${user.id}"></span>
+        <span th:text="${@users.getLoginId()}">sdfada</span>
+    </li>
+</ul>
+</body>
+</html>

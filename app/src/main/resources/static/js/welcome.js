@@ -13,13 +13,13 @@ layer.ready(function () {
         return false;
     });
 
-    $('#pay-qrcode').click(function(){
-        var html=$(this).html();
+    $('#pay-qrcode').click(function () {
+        var html = $(this).html();
         parent.layer.open({
             title: false,
             type: 1,
-            closeBtn:false,
-            shadeClose:true,
+            closeBtn: false,
+            shadeClose: true,
             area: ['600px', 'auto'],
             content: html
         });
@@ -34,7 +34,4 @@ layer.ready(function () {
             btn: ['确定', '取消']
         });
     }
-
-    console.log('欢迎使用H+，如果您在使用的过程中有碰到问题，可以参考开发文档，感谢您的支持。');
-
 });
