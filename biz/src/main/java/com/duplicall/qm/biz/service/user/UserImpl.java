@@ -1,11 +1,14 @@
 package com.duplicall.qm.biz.service.user;
 
 import com.duplicall.qm.common.model.Users;
+import com.duplicall.qm.common.model.UsersExample;
 import com.duplicall.qm.dao.mapper.UsersMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/2/7.
@@ -22,5 +25,11 @@ public class UserImpl implements IUser {
     public Users queryById(int id) {
         logger.debug("query user which id is ", id);
         return usersMapper.selectByPrimaryKey(1);
+    }
+
+    @Override
+    public List<Users> selectByExample(UsersExample usersExample) {
+        List<Users> usersList = usersMapper.selectByExample(usersExample);
+        return usersList;
     }
 }
