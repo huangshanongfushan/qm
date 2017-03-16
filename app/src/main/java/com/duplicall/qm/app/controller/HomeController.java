@@ -16,8 +16,13 @@ class HomeController {
     @Resource
     private IUser userImpl;
 
-    @GetMapping("/")
+    @GetMapping("/login")
     String index() {
+        return "login";
+    }
+
+    @GetMapping("/home")
+    String home() {
         return "login";
     }
 
